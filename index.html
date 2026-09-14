@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101116"><meta name="description" content="Учи Kotlin через практику: от первого свойства до системы бронирования отеля.">
+<title>Kotlin Quest — практика программирования</title>
+<link rel="stylesheet" href="styles.css">
+<script defer src="lessons.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#lesson-title">К заданию</a>
+<header><a class="brand" href="#welcome"><span class="logo">K<span>Q</span></span><span>Kotlin <b>Quest</b></span></a><div class="header-right"><span id="rank">Ученик</span><strong id="xp">0 XP</strong><button id="menu-toggle" aria-expanded="false" aria-controls="sidebar">Уроки ☰</button></div></header>
+<div class="shell">
+<aside id="sidebar">
+<div class="aside-heading"><span class="eyebrow">ТВОЙ МАРШРУТ</span><span id="count">0 / 12</span></div>
+<progress id="progress" max="12" value="0" aria-label="Пройденные задания"></progress>
+<nav id="lesson-list" aria-label="Уроки"></nav>
+<section class="backup"><h2>Твой прогресс</h2><p>Хранится в этом браузере. Сохрани копию для другого устройства.</p><button id="export">Скачать прогресс</button><label class="import-label" for="import">Загрузить копию</label><input id="import" type="file" accept="application/json,.json"><p id="storage-status" role="status"></p></section>
+</aside>
+<main>
+<div class="breadcrumb"><span id="world"></span><span> / </span><span id="topic"></span></div>
+<div class="lesson-heading"><div><div class="eyebrow" id="lesson-number"></div><h1 id="lesson-title" tabindex="-1"></h1></div><span class="reward" id="reward"></span></div>
+<div class="workspace">
+<article class="learning">
+<div class="tabs" role="tablist" aria-label="Материалы урока"><button id="tab-theory" role="tab" aria-selected="true" aria-controls="panel-theory" tabindex="0">01 Теория</button><button id="tab-task" role="tab" aria-selected="false" aria-controls="panel-task" tabindex="-1">02 Задание</button><button id="tab-resources" role="tab" aria-selected="false" aria-controls="panel-resources" tabindex="-1">03 Материалы</button></div>
+<section id="panel-theory" role="tabpanel" aria-labelledby="tab-theory"><h2>Разберись в идее</h2><div id="theory"></div><div class="application"><span class="eyebrow">ЗАЧЕМ ЭТО РАЗРАБОТЧИКУ</span><p id="use"></p></div><button id="to-task" class="primary">Перейти к заданию →</button></section>
+<section id="panel-task" role="tabpanel" aria-labelledby="tab-task" hidden><h2>Твоя задача</h2><p id="task"></p><div class="hintbox"><div class="aside-heading"><h3>Нужна зацепка?</h3><span id="hint-count">0 / 3</span></div><p>Подсказки объясняют подход. Решение остаётся за тобой.</p><ol id="hints"></ol><button id="hint">Открыть подсказку</button></div></section>
+<section id="panel-resources" role="tabpanel" aria-labelledby="tab-resources" hidden><h2>Продолжить изучение</h2><a id="docs" target="_blank" rel="noopener noreferrer" class="resource">Документация Kotlin ↗<small>Официальный материал · на английском</small></a><a id="youtube" target="_blank" rel="noopener noreferrer" class="resource">Видео по теме на русском ↗<small>Поиск YouTube · ролики не отобраны вручную</small></a><p>Ищи объяснение темы, а не решение конкретного задания. Начни с одного объяснения темы, затем вернись к самостоятельной практике.</p><h3>Kotlin за пределами курса</h3><p>Язык используется для Android-приложений и серверных сервисов. Освоенные модели и функции можно перенести в собственный проект.</p><a href="https://kotlinlang.org/docs/android-overview.html" target="_blank" rel="noopener noreferrer">Kotlin для Android ↗</a><br><a href="https://kotlinlang.org/docs/server-overview.html" target="_blank" rel="noopener noreferrer">Серверная разработка ↗</a></section>
+</article>
+<section class="coding" aria-label="Редактор Kotlin">
+<div class="editor-top"><span><i></i> Solution.kt</span><span>Kotlin / JVM</span></div>
+<div id="editor"></div>
+<div id="consent-box"><p>Для компиляции и проверки твой код отправляется сервису Kotlin Playground от JetBrains. Нужен интернет.</p><button id="consent" class="primary">Включить проверку</button></div>
+<div class="editor-actions"><button id="run" class="primary" disabled>▶ Проверить решение</button><button id="reset">Начать заново</button><span id="draft-status" role="status">Черновик</span></div>
+<div class="result" id="result" role="status" aria-live="polite"><span class="eyebrow">ОБРАТНАЯ СВЯЗЬ</span><p id="feedback">Прочитай теорию и попробуй решить задание самостоятельно.</p></div>
+<div id="success" hidden><strong>Задание пройдено!</strong><p id="success-text"></p><button id="next" class="primary">Следующее задание →</button></div>
+<p class="editor-note">Проверяем результат работы программы. При ошибке компиляции смотри сообщение под редактором. Готовые решения здесь не выдаются.</p>
+</section>
+</div>
+<footer><span>Сначала понимание. Затем твой код.</span><a href="https://github.com/Fert2537/kotlin-quest" target="_blank" rel="noopener noreferrer">Исходники ↗</a></footer>
+</main></div>
+</body></html>
